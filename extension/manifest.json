@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "ZenFocus Shield // Live Window & Domain Closer",
+  "version": "1.1.0",
+  "description": "Instantly closes or locks browser windows and tabs matching blacklisted domains whenever the ZenFocus timer is active.",
+  "permissions": [
+    "tabs",
+    "webNavigation",
+    "declarativeNetRequest",
+    "alarms",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:3001/*",
+    "http://127.0.0.1:3001/*",
+    "http://localhost:5173/*",
+    "http://127.0.0.1:5173/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ZenFocus Shield Status"
+  }
+}
